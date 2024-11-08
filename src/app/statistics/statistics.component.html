@@ -1,0 +1,33 @@
+<div class="flex flex-wrap justify-center gap-4">
+        <!-- Bar Chart Container -->
+        <mat-card class="w-full md:w-1/3 lg:w-1/3 h-[400px] flex  justify-center">
+            <mat-card-header>
+                <h2>Bar Chart</h2>
+            </mat-card-header>
+            <mat-card-content>
+                <canvas baseChart 
+                        [datasets]="chartData" 
+                        [labels]="chartLabels" 
+                        [options]="chartOptions" 
+                        [legend]="true"
+                        [type]="'bar'">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    
+        <!-- Pie Chart Container -->
+        <mat-card class="w-full md:w-1/3 lg:w-1/3 h-[400px] flex items-center justify-center">
+            <mat-card-header>
+                <h2>Pie Chart</h2>
+            </mat-card-header>
+            <mat-card-content>
+                <canvas baseChart 
+                        [datasets]="chartDataPie" 
+                        [labels]="chartLabelsPie" 
+                        [options]="chartOptionsPie"
+                        [legend]="true" 
+                        [type]="'pie'">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>

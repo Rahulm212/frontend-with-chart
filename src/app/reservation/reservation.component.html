@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-header>
+        <hr />
+        <h2>Reservation Table</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <table class="min-w-full border border-gray-200" datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="px-4 py-2 border-b text-left">Id</th>
+                    <th class="px-4 py-2 border-b text-left">BetriebId</th>
+                    <th class="px-4 py-2 border-b text-left">GastId</th>
+                    <th class="px-4 py-2 border-b text-left">People Count</th>
+                    <th class="px-4 py-2 border-b text-left">Status</th>
+            </thead>
+            <tbody>
+                @for (item of tableList; track item) {
+                    <tr>
+                    <td class="px-4 py-2 border-b">{{ item.id }}</td>
+                    <td class="px-4 py-2 border-b">{{ item.betriebId }}</td>
+                    <td class="px-4 py-2 border-b">{{ item.gastId }}</td>
+                    <td class="px-4 py-2 border-b">{{ item.peopleCount }}</td>
+                    <td class="px-4 py-2 border-b">{{ item.status }}</td>
+                    </tr>
+                }   
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>
